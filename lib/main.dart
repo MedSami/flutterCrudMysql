@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           var route = new MaterialPageRoute(
             builder: (BuildContext context) =>
-                new SecondScreen(idUser: data[0]['user_id']),
+                new SecondPage(idUser: data[0]['user_id'],firstname: data[0]['first_name'],lastname: data[0]['last_name'],username: data[0]['username'],),
           );
           Navigator.of(context).push(route);
         } else {
