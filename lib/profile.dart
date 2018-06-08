@@ -52,11 +52,11 @@ class _ProfileState extends State<Profile> {
   }
 
   _launchURL() async {
-    const url = 'https://flutter.io';
+    const url = 'tel:27181132';
     if (await canLaunch(url)) {
-      await launch('tel:27181132');
+      await launch(url);
     } else {
-      throw 'Could not launch $url';
+      throw 'Could not make Call';
     }
   }
 
