@@ -32,7 +32,8 @@ class _AllUsersState extends State<AllUsers> {
               child: new Text('Close'),
               onPressed: () {
                 Navigator.of(context).pop();
-              },
+              _getData();
+                },
             ),
           ],
         );
