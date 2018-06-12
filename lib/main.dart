@@ -163,11 +163,9 @@ class _MyHomePageState extends State<MyHomePage> {
     /****************************************************/
     /********************* Button Login****************************************/
     var createaccount = new Container(
-      child: RaisedButton(
+      child: FlatButton(
         child: const Text('Register'),
-        color: Theme.of(context).accentColor,
-        elevation: 8.0,
-        splashColor: Colors.blueGrey,
+
         onPressed: () {
           var route = new MaterialPageRoute(
             builder: (BuildContext context) => new Register(),
@@ -217,28 +215,31 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           logo,
           SizedBox(
-            height: 100.0,
+            height: 50.0,
           ),
           new Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Column(
-              children: <Widget>[pseudo, password],
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: new Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[cancelButton, loginButton, createaccount],
+            padding: const EdgeInsets.all(20.0),
+            child: new Card(
+              elevation: 8.0,
+              color: Colors.white,
+              child: new Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  children: <Widget>[pseudo, password,
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[cancelButton, loginButton],
+                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
+          SizedBox(height: 5.0,),
+          createaccount
         ],
       ),
     );
